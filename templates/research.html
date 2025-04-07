@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research Lab - Advancing Knowledge Through Innovation</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --light-color: #ecf0f1;
+            --dark-color: #2c3e50;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+        
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+        }
+        
+        nav {
+            background-color: var(--dark-color);
+            padding: 1rem 0;
+        }
+        
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin: 0 1rem;
+        }
+        
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        nav ul li a:hover {
+            color: var(--secondary-color);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        section {
+            margin-bottom: 3rem;
+        }
+        
+        h1, h2, h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+        }
+        
+        h2 {
+            font-size: 2rem;
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        h3 {
+            font-size: 1.5rem;
+        }
+        
+        p {
+            margin-bottom: 1rem;
+        }
+        
+        .research-areas {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .research-area {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .research-area:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .research-area img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .research-area-content {
+            padding: 1.5rem;
+        }
+        
+        .publications {
+            list-style: none;
+        }
+        
+        .publication {
+            background-color: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .publication-title {
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .publication-authors {
+            font-style: italic;
+            color: #666;
+            margin-bottom: 0.5rem;
+        }
+        
+        .publication-journal {
+            color: var(--secondary-color);
+            margin-bottom: 0.5rem;
+        }
+        
+        .publication-abstract {
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid #eee;
+        }
+        
+        .team {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .team-member {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        
+        .team-member img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+        
+        .team-member-info {
+            padding: 1.5rem;
+        }
+        
+        .team-member-name {
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .team-member-role {
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+        }
+        
+        .contact-info {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .contact-details {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin-top: 1.5rem;
+        }
+        
+        .contact-item {
+            flex: 1;
+            min-width: 250px;
+        }
+        
+        .contact-item h3 {
+            margin-bottom: 0.5rem;
+        }
+        
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 3rem;
+        }
+        
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            nav ul li {
+                margin: 0.5rem 0;
+            }
+            
+            .research-areas, .team {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Research</h1>
+        <p>Advancing the frontiers of knowledge through groundbreaking research and scholarly inquiry,<br>driven by a passion for academic excellence and continuous exploration in my field of expertise.</p>
+    </header>
+    
+    
+    <nav>
+        <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="../index.html">Home</a></li>
+            
+            
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <main>
+        
+        
+
+        <section id="about" class="container">
+            <h2>About Our Library</h2>
+            <p>Department of Gujarati’s Library at the University of Mumbai. We are dedicated to advancing the study and research of Gujarati language, linguistics, and literature. Our mission is to promote the understanding of Gujarati, preserve its cultural heritage, and support the academic community in exploring new dimensions of the language.</p>
+            <p>Founded in 1970, our department and its library have grown to become a key resource for students and researchers in the field of Gujarati studies. We offer Post Graduate courses in Gujarati language and literature, and our library houses over 1500 books, providing valuable resources for both academic learning and advanced research.</p>
+        </section>
+        
+        <section id="research" class="container">
+            <h2>Research Areas</h2>
+            <p>My research spans various aspects of the Gujarati language and literature, focusing on addressing key challenges in language preservation, linguistics, and cultural heritage. Here are my primary research areas</p>
+            
+            <div class="research-areas">
+                <div class="research-area">
+                    <img src="https://via.placeholder.com/400x200" alt="Women Saint Writers ">
+                    <div class="research-area-content">
+                        <h3>Research Work on Women Saint Writers of India</h3>
+                        <p>Our research focuses on the literary contributions of women saint writers in India, exploring their impact on cultural and religious discourse. We aim to analyze their works within historical, social, and spiritual contexts, highlighting their role in shaping literary traditions.</p>
+                    </div>
+                </div>
+                
+                <div class="research-area">
+                    <img src="https://via.placeholder.com/400x200" alt="Research Work on Gender">
+                    <div class="research-area-content">
+                        <h3>Research Work on Gender in Art</h3>
+                        <p>Our research delves into the representation of gender in various forms of art, examining how art reflects, challenges, and shapes societal perceptions of gender roles. We explore the intersection of visual culture and gender theory across different artistic movements and mediums.</p>
+                    </div>
+                </div>
+                
+                <div class="research-area">
+                    <img src="https://via.placeholder.com/400x200" alt="Research Work on Ecocriticism & Art">
+                    <div class="research-area-content">
+                        <h3>Research Work on Ecocriticism & Art</h3>
+                        <p>We focus on the relationship between art and environmental themes, using ecocriticism to examine how artists address ecological issues. Our work explores the role of art in raising awareness about environmental challenges and its potential to inspire social change through visual expression.</p>
+                    </div>
+                </div>
+
+                <div class="research-area">
+                    <img src="https://via.placeholder.com/400x200" alt="Ph.D. Research in Modern Gujarati">
+                    <div class="research-area-content">
+                        <h3>Ph.D. Research in Modern Gujarati Fiction</h3>
+                        <p>Our research in modern Gujarati fiction aims to explore the evolution of narrative styles, themes, and social commentary in contemporary Gujarati literature. This includes an in-depth analysis of key authors and their contributions to the literary landscape, with a focus on modernity, identity, and cultural transformation.</p>
+                    </div>
+                </div>
+
+
+                <div class="research-area">
+                    <img src="https://via.placeholder.com/400x200" alt="Ph.D. Research in Modern Gujarati">
+                    <div class="research-area-content">
+                        <h3>UGC National Research Fellowship Award</h3>
+                        <p>The UGC National Research Fellowship Award is a prestigious recognition granted to scholars for their exceptional research potential in their respective fields. Our research under this fellowship focuses on advancing knowledge in the domain of Gujarati language and literature, with a special emphasis on the socio-cultural aspects and literary contributions of marginalized communities. The fellowship supports innovative projects aimed at addressing key issues and promoting deeper understanding in the field of language and literary studies.</p>
+                    </div>
+                </div>
+
+
+
+                
+                
+            </div>
+        </section>
+        
+        <section id="publications" class="container">
+            <h2>My Publications</h2>
+            <ul class="publications">
+                <li class="publication">
+                
+                    <div class="publication-title">The Evolution of Gujarati Language: A Comprehensive Study</div>
+                    <div class="publication-authors">Dr Urvashi manuprasad Pandya.</div>
+                    <div class="publication-journal">Journal of Gujarati Linguistics, 2023, Vol. 22, pp. 78-102</div>
+                    <div class="publication-abstract">
+                        <strong>Abstract:</strong> This paper presents a comprehensive study of the evolution of the Gujarati language, exploring its historical development, linguistic features, and regional variations. We discuss key aspects of phonetics, syntax, semantics, and morphology, as well as the impact of socio-cultural factors on the language's evolution. The study also examines contemporary challenges in language preservation and revitalization efforts for Gujarati.
+                    </div>
+
+
+                </li>
+                
+                <li class="publication">
+                    <div class="publication-title">Ethical Considerations in Language Preservation: A Framework for Responsible Documentation</div>
+                    <div class="publication-authors">Dr Urvashi manuprasad Pandya.</div>
+                    <div class="publication-journal">Journal of Language Preservation and Ethics, 2023, Vol. 12, pp. 45-58</div>
+                    <div class="publication-abstract">
+                        <strong>Abstract:</strong> This paper proposes a framework for the responsible documentation and preservation of endangered languages. We discuss the ethical considerations in language preservation, including cultural sensitivity, community involvement, and the impact of technological tools. We also present case studies highlighting the application of our framework in the preservation of lesser-known languages, with a particular focus on Gujarati and its dialects.
+                    </div>
+                    
+                </li>
+                
+                <li class="publication">
+                    <div class="publication-title">Language Revitalization through Digital Tools: Progress and Challenges</div>
+                    <div class="publication-authors">Dr Urvashi manuprasad Pandya.</div>
+                    <div class="publication-journal">Journal of Language Technology and Preservation, 2023, Vol. 14, pp. 34-56</div>
+                    <div class="publication-abstract">
+                        <strong>Abstract:</strong> This paper reviews the progress and challenges in using digital tools for language revitalization. We discuss the latest technological advancements, including speech recognition, language corpora, and online platforms. We also highlight the ethical, social, and cultural considerations in the digital preservation and revitalization of endangered languages, with a particular focus on Gujarati and other regional languages.
+                    </div>
+
+                </li>
+            </ul>
+        </section>
+        
+        <section id="team" class="container">
+            <h2>My Team</h2>
+            <p>Our research team consists of dedicated scientists, engineers, and students who are passionate about advancing knowledge and making a positive impact on society.</p>
+            
+            <div class="team">
+                <div class="team-member">
+                    <img src="https://via.placeholder.com/300x300" alt="Dr. Jane Smith">
+                    <div class="team-member-info">
+                        <div class="team-member-name">Dr. Jane </div>
+                        <div class="team-member-role">Director</div>
+                        <p>Dr.  and has over 15 years of research experience. She leads__________________________.</p>
+                    </div>
+                </div>
+                
+                <div class="team-member">
+                    <img src="https://via.placeholder.com/300x300" alt="Dr. Robert Johnson">
+                    <div class="team-member-info">
+                        <div class="team-member-name">Dr. Urvashi Pandya</div>
+                        <div class="team-member-role">Senior Researcher</div>
+                        <p>___________________________________________________________________</p>
+                    </div>
+                </div>
+                
+                <div class="team-member">
+                    <img src="https://via.placeholder.com/300x300" alt="Dr. Emily Williams">
+                    <div class="team-member-info">
+                        <div class="team-member-name">Dr. Urvashi manuprasad pandya</div>
+                        <div class="team-member-role">Senior Researcher</div>
+                        <p>Dr.__________________________________________________________________</p>
+                    </div>
+                </div>
+                
+                <div class="team-member">
+                    <img src="https://via.placeholder.com/300x300" alt="Michael Brown">
+                    <div class="team-member-info">
+                        <div class="team-member-name">Urashi Manuprasad pandya</div>
+                        <div class="team-member-role">PhD Student</div>
+                        <p>_______________________________________________________________________</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="contact" class="container">
+            <h2>Contact</h2>
+            <div class="contact-info">
+                <p>I welcome collaborations, inquiries, and opportunities to share my research. Feel free to reach out to me using the information below.</p>
+
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <h3>Address</h3>
+                        <p>A-12/4, Vidyanagari Campus,</p>
+                        <p>Kalina,Mumbai University,</p>
+                        <p>Santacruz (East), India </p>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <h3>Email</h3>
+                        
+                        <p>drurvashipandya@gmail.com </p>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <h3>Phone</h3>
+                        <p>Office: 9619673577 </p>
+                        <p>Home: 9821673577</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <!-- <p>&copy; 2023 Advanced Research Laboratory. All rights reserved.</p>
+        <p>Funded by the National Science Foundation and private donations.</p> -->
+    </footer>
+</body>
+</html>
+
+
+
+
+
+
+
+  
