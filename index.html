@@ -1,0 +1,419 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+
+</head>
+
+
+
+
+<body>
+    
+    <header>
+        <div class="header-container">
+            <div class="title">
+                Dr. Urvashi Manuprasad Pandya
+                <span class="sub-title">Passionate Professor & Head Of Department</span>
+                <span class="location">University of Mumbai</span>
+            </div>
+    
+            
+            <button class="hamburger" aria-label="Toggle navigation">
+                <span> About</span>
+                <span>Gallery</span>
+                <span>Research</span>
+                <span>Blog</span>
+                <span>Contact</span>
+            </button>
+    
+            <nav class="nav-links">
+                <a href="/about">About</a>
+                <a href="/gallery">Gallery</a>
+                <a href="#portfolio">Research</a>
+                <a href="/blog">Blog</a>
+                <a href="/contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+    
+    
+    
+    
+
+    <main>
+  
+
+        <div class="container">
+            <div class="left-section">
+                <img src="{{ url_for('static', filename='images/no_back2 (1).png') }}" alt="Profile Picture not found" class="nitya">
+            </div>
+        
+            <div class="middle-section">
+                <h1 class="title2">A Bit About Me</h1>
+                <p class="quote">Hello! I am Dr. Urvashi Pandya, the Head of the Gujarati Department at Mumbai University. I have a deep passion for language, literature, and research, and I hold a Ph.D. in language. My work focuses on [insert your area of expertise or research focus here], where I strive to blend academic rigor with cultural exploration. Beyond my academic role, I also serve as the Warden of the Girls' Hostel, where I work to create a supportive environment that promotes both personal and academic growth for students.</p>
+                <p class="quote">  As a mentor, I am dedicated to shaping the next generation of scholars and leaders, fostering a sense of community and holistic development in everything I do. </p>
+                <div class="circle-section">
+                   
+                    <a href="{{ url_for('static', filename='MAM_Resume.pdf') }}" class="circle resume" target="_blank">Resume</a>
+
+                    <a href="skills.html" class="circle skills" target="_blank">Experiences</a>
+                    <a href="public.html" class="circle public" target="_blank">Public</a>
+                </div>
+
+            </div>
+        
+            <div class="right-section">
+                <img src="{{ url_for('static', filename='images/rajabai_noback__last_enh.png') }}" alt="Sample Image" class="item-image">
+            </div>
+        </div>
+        
+        
+
+
+    
+    
+
+
+
+    <section id="academic-education">   
+        <div class="container">
+            <div class="academic-position">
+                <h2>Academic Positions</h2>
+    
+               
+                <div class="position-item">
+                    <div class="small-squares">
+                        <div class="small-square green">2025</div>
+                        <div class="small-square blue">2089</div>
+                    </div>
+                    <div class="position-content">
+                        <h3>Head of Department</h3>
+                        <p>Gujarati Department, Mumbai University</p>
+                    </div>
+                </div>
+    
+               
+                <div class="position-item">
+                    <div class="small-squares">
+                        <div class="small-square green">2020</div>
+                        <div class="small-square blue">2022</div>
+                    </div>
+                    <div class="position-content">
+                        <h3>Warden</h3>
+                        <p>Girls' Hostel, Mumbai University</p>
+                    </div>
+                </div>
+    
+               
+                <div class="position-item">
+                    <div class="small-squares">
+                        <div class="small-square green">2010</div>
+                        <div class="small-square blue">2019</div>
+                    </div>
+                    <div class="position-content">
+                        <h3>Professor</h3>
+                        <p>Specializing in Linguistics and Literature</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="education-training">
+                <h2>Education & Training</h2>
+              
+                <div class="education-item">
+                    <div class="small-squares2">
+                        <div class="small-square green">PHD</div>
+                        <div class="small-square blue">2015</div>
+                    </div>
+                    <div class="education-content">
+                        <h3>Ph.D. in Language & Literature</h3>
+                        <p>University of Mumbai</p>
+                    </div>
+                </div>
+                
+                <div class="education-item">
+                    <div class="small-squares2">
+                        <div class="small-square green">MBA</div>
+                        <div class="small-square blue">2008</div>
+                    </div>
+                    <div class="education-content">
+                        <h3>Master's in Gujarati Literature (comparative Literature Philosophy and Aesthetics or Womens Study)</h3>
+                        <p>University of Mumbai</p>
+                    </div>
+                </div>
+                
+                <div class="education-item">
+                    <div class="small-squares2">
+                        <div class="small-square green">MA</div>
+                        <div class="small-square blue">2020</div>
+                    </div>
+                    <div class="education-content">
+                        <h3>Certified Mentor</h3>
+                        <p>Focused on Leadership and Development</p>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+    
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+    
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            hamburger.classList.toggle('open');
+        });
+    </script>
+    
+
+
+
+
+    </main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+    <footer>
+
+        <ul>
+            <li><a href="https://facebook.com" target="_blank" aria-label="Facebook"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>
+            <li><a href="https://twitter.com" target="_blank" aria-label="Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
+            <li><a href="https://plus.google.com" target="_blank" aria-label="Google Plus"><i class="fab fa-google-plus-g" aria-hidden="true"></i></a></li>
+            <li><a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin" aria-hidden="true"></i></a></li>
+            <li><a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
+        </ul>
+
+    </footer>
+</body>
+</html> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="static/index.css">
+
+    <title>Dr. Urvashi Manuprasad Pandya</title>
+</head>
+
+<body>
+
+    <header>
+        <div class="header-container">
+            <div class="title">
+                Dr. Urvashi Manuprasad Pandya
+                <span class="sub-title">Passionate Professor & Head Of Department</span>
+                <span class="location">University of Mumbai</span>
+            </div>
+
+            <button class="hamburger" aria-label="Toggle navigation">
+                <span>About</span>
+                <span>Gallery</span>
+                <span>Research</span>
+                <span>Blog</span>
+                <span>Contact</span>
+            </button>
+
+            <nav class="nav-links">
+                <a href="templates/about.html">About</a>
+                <a href="templates/gallery.html">Gallery</a>
+                <a href="#portfolio">Research</a>
+                <a href="templates/blog.html">Blog</a>
+                <a href="templates/contact.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="left-section">
+                <img src="static/images/no_back2 (1).png" alt="Profile Picture not found" class="nitya">
+            </div>
+
+            <div class="middle-section">
+                <h1 class="title2">A Bit About Me</h1>
+                <p class="quote">Hello! I am Dr. Urvashi Pandya, the Head of the Gujarati Department at Mumbai University. I have a deep passion for language, literature, and research, and I hold a Ph.D. in language. My work focuses on [insert your area of expertise or research focus here], where I strive to blend academic rigor with cultural exploration. Beyond my academic role, I also serve as the Warden of the Girls' Hostel, where I work to create a supportive environment that promotes both personal and academic growth for students.</p>
+                <p class="quote">As a mentor, I am dedicated to shaping the next generation of scholars and leaders, fostering a sense of community and holistic development in everything I do.</p>
+
+                <div class="circle-section">
+                    <a href="static/MAM_Resume.pdf" class="circle resume" target="_blank">Resume</a>
+                    <a href="skills.html" class="circle skills" target="_blank">Experiences</a>
+                    <a href="public.html" class="circle public" target="_blank">Public</a>
+                </div>
+            </div>
+
+            <div class="right-section">
+                <img src="static/images/rajabai_noback__last_enh.png" alt="Sample Image" class="item-image">
+            </div>
+        </div>
+
+        <section id="academic-education">
+            <div class="container">
+                <div class="academic-position">
+                    <h2>Academic Positions</h2>
+
+                    <div class="position-item">
+                        <div class="small-squares">
+                            <div class="small-square green">2025</div>
+                            <div class="small-square blue">2089</div>
+                        </div>
+                        <div class="position-content">
+                            <h3>Head of Department</h3>
+                            <p>Gujarati Department, Mumbai University</p>
+                        </div>
+                    </div>
+
+                    <div class="position-item">
+                        <div class="small-squares">
+                            <div class="small-square green">2020</div>
+                            <div class="small-square blue">2022</div>
+                        </div>
+                        <div class="position-content">
+                            <h3>Warden</h3>
+                            <p>Girls' Hostel, Mumbai University</p>
+                        </div>
+                    </div>
+
+                    <div class="position-item">
+                        <div class="small-squares">
+                            <div class="small-square green">2010</div>
+                            <div class="small-square blue">2019</div>
+                        </div>
+                        <div class="position-content">
+                            <h3>Professor</h3>
+                            <p>Specializing in Linguistics and Literature</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="education-training">
+                    <h2>Education & Training</h2>
+
+                    <div class="education-item">
+                        <div class="small-squares2">
+                            <div class="small-square green">PHD</div>
+                            <div class="small-square blue">2015</div>
+                        </div>
+                        <div class="education-content">
+                            <h3>Ph.D. in Language & Literature</h3>
+                            <p>University of Mumbai</p>
+                        </div>
+                    </div>
+
+                    <div class="education-item">
+                        <div class="small-squares2">
+                            <div class="small-square green">MBA</div>
+                            <div class="small-square blue">2008</div>
+                        </div>
+                        <div class="education-content">
+                            <h3>Master's in Gujarati Literature (Comparative Literature, Philosophy and Aesthetics, or Women's Study)</h3>
+                            <p>University of Mumbai</p>
+                        </div>
+                    </div>
+
+                    <div class="education-item">
+                        <div class="small-squares2">
+                            <div class="small-square green">MA</div>
+                            <div class="small-square blue">2020</div>
+                        </div>
+                        <div class="education-content">
+                            <h3>Certified Mentor</h3>
+                            <p>Focused on Leadership and Development</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <script>
+            const hamburger = document.querySelector('.hamburger');
+            const navLinks = document.querySelector('.nav-links');
+
+            hamburger.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+                hamburger.classList.toggle('open');
+            });
+        </script>
+    </main>
+
+    <footer>
+        <ul>
+            <li><a href="https://facebook.com" target="_blank" aria-label="Facebook"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>
+            <li><a href="https://twitter.com" target="_blank" aria-label="Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
+            <li><a href="https://plus.google.com" target="_blank" aria-label="Google Plus"><i class="fab fa-google-plus-g" aria-hidden="true"></i></a></li>
+            <li><a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin" aria-hidden="true"></i></a></li>
+            <li><a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
+        </ul>
+    </footer>
+</body>
+
+</html>
